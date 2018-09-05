@@ -1,3 +1,3 @@
-# Detect-and-correct-color-cast
+# Image-analysis-using-Legendre-moment
 
-Use of openCV to detect cast (unwanted tints) in captured images. Further, using computer vision and image processing to correct the image and make it more appealing and natural # Image-analysis-using-Legendre-moment
+Features of an image were extracted using Legendre Moments. This information was used in Image Reconstruction and Classification.
