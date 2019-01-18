@@ -1,0 +1,4 @@
+level = graythresh(ans);
+%level=multithresh(ans);
+BW = im2bw(ans,level);
+figure,imshow(BW)
