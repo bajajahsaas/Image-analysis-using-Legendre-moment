@@ -45,8 +45,7 @@ for m = 0 : nx-1
 end
 
 
-
-
+%inverse calculation using stored values of Moments
 for x = 0 : nx-1
     for y = 0 : ny-1
         T1(x+1,y+1)=0;
@@ -57,3 +56,8 @@ for x = 0 : nx-1
         end
     end
 end
+
+% Applying the threshold and checking the output:
+level = graythresh(ans);
+BW = im2bw(ans,level);
+figure,imshow(BW)

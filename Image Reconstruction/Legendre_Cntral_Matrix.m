@@ -1,3 +1,6 @@
+%img is the image object formed after reading the image using imread()
+function of MATLAB.
+
 function s = Legendre_Cntral_Matrix(img,p,q)%%%%%% translation invariant LM
                                                     %%% max -- order
 [nx,ny]=size(img);
@@ -30,6 +33,20 @@ for y = 0 : ny - 1
         end
     end
 end
+
+%storing legendre moments
+for m = 0 : nx-1
+    for n= 0 : ny-1
+        L(m+1,n+1)=0;
+        for i = 1 : nx
+            for j = 1 : ny
+                L(m+1,n+1)=L(m+1,n+1)+(M_LX(m+1,i)*M_LY(n+1,j)*img(i,j));
+            end
+        end
+        L(m+1,n+1)=L(m+1,n+1)* ((2*m+1)*(2*n+1))/(nx*ny);
+    end
+end
+
 T=0;
 for i = 1 : nx 
     for j = 1 : ny
